@@ -35,13 +35,17 @@ rgb.addEventListener('click', () => {
 });
 
 gridSize.addEventListener('click', () => {
-    let num = prompt('Enter grid Size');
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
+    let num = prompt('Enter grid Size(16-60)');
+    if (num > 16 && num <= 60) {
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
+        }
+        container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
+        container.style.gridTemplateRows = `repeat(${num}, 1fr)`;
+        makeDivs(num);
+    } else {
+        alert('Please enter right grid size');
     }
-    container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${num}, 1fr)`;
-    makeDivs(num);
 });
 
 document.querySelectorAll('.btn').forEach(button => {
