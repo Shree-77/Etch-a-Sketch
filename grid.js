@@ -21,7 +21,14 @@ function Sketch(color) {
         cell.addEventListener('mouseover', () => {
             cell.style.backgroundColor = color;
         });
+        cell.addEventListener('click', () => {
+            cell.style.backgroundColor = color;
+        });
+        cell.addEventListener('touchstart', () => {
+            cell.style.backgroundColor = color;
+        });
     });
+
 }
 
 
