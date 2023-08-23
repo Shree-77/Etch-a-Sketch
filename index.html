@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Etch-a-Sketch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="grid.js" defer></script>
+    <link rel="icon" href="./img/colored-pencils.png" type="image/png">
 </head>
 
 <body>
-    <div class="body">
-        <div class="column">
-            <div class="header">
-                <h1>Etch a Sketch</h1>
-            </div>
-            <div id="container"></div>
-
+    <h1 id="header">
+        <img src="./img/colored-pencils.png" alt="colored-pencils img" class="logo">
+        Etch-a-sketch
+    </h1>
+    <div id="container">
+        <div id="settings">
+            <lable for="colorPicker"></lable>
+            <input type="color" id="colorPicker">
+            <button id="colorModeBtn">Color Mode</button>
+            <button id="randomBtn">Rainbow Mode</button>
+            <button id="eraserBtn">Eraser</button>
+            <button id="darkShadeBtn">Gray Scale</button>
+            <button id="clearBtn">Clear</button>
+            <button id="sizeBtn">Grid Size</button>
         </div>
-        <div class="column">
-            <div class="buttons">
-                <button id="SetGridSize" class="btn">SetGrid</button>
-                <button id="blue" value="blue" class="btn">Blue</button>
-                <button id="green" value="green" class="btn">Green</button>
-                <button id="rgb">RGB</button>
-                <button id="white" value="white" class="btn">Erase</button>
-                <button id="reset" value="reset">Reset</button>
-            </div>
-        </div>
+        <div id="grid"></div>
+    </div>
+    <div id="footer">
+        Copyright © Shree 2023
+        <a href="https://github.com/Shree-77" target="_blank">
+            <img src="./img/github.png" alt="github icon">
+        </a>
     </div>
 </body>
 
